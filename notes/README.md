@@ -4,4 +4,5 @@ Short, casual notes from building and experimenting with the AI Workflow Suite a
 
 Newest first:
 
+- [2026-09-01 — Who Is Optimizing Your Attention?](2026-09-01-who-is-optimizing-your-attention.md)
 - [2026-08-26 — Local AI worker is alive](2026-08-26-local-ai-worker.md)

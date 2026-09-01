@@ -18,6 +18,12 @@ Short practical definitions for terms used throughout these repositories. The go
 | **Roster** | The current list of active agent instances: who is present, their role and runtime identity. | Team definition is the organization chart; roster is **who is actually at work right now**. |
 | **Harness** | Runtime machinery around a model: agent loop, sessions, tools, files, terminal, plugins, sub-agents, computer use, etc. | **Model = intelligence; harness = machinery that lets it work.** Examples below. |
 | **Token** | A small piece of text a language model reads or produces. A word may be one token or several. | Not literally electricity/GPU time, but a useful meter of model work: more unnecessary tokens usually mean more compute, latency and cost. |
+| **Context** | The information currently supplied to the model for this request/session: instructions, conversation, retrieved files/data, tool results, etc. | Context is the model's **current working material**. More context is not automatically better; irrelevant context can cost money and make reasoning harder. |
+| **Context window** | The maximum amount of tokenized context a model can work with at once. | One of the most important practical AI limits. Understanding it helps keep agents focused, improves efficiency and avoids paying repeatedly for material the model did not need. |
+| **Prompt** | An instruction or request given to the model. | A prompt is only part of the context; system rules, history, retrieved information and tool results may also be present. |
+| **Tool / tool call** | A capability the model/agent can invoke to interact with something outside its own generated text. | Examples: read a file, call an API, execute a command, search, inspect a calendar. The model chooses/requests the action; the tool actually performs it. |
+| **Memory** | Information preserved so it can be retrieved again beyond the immediate working context/session. | `Memory != context`. Good systems retrieve only relevant memory instead of loading everything every time. |
+| **MCP (Model Context Protocol)** | A protocol for exposing tools/resources to AI applications through a common interface. | It can make integrations portable across compatible clients/harnesses instead of building a custom connection for each one. |
 | **Model** | The trained neural network doing language/reasoning work, e.g. GPT, Claude, Gemini or Qwen. | `Harness != Model`. One harness can use different models. |
 | **Training** | The expensive process of creating/updating a model by repeatedly adjusting its learned parameters from large amounts of data. | Different from **inference**, which runs an already-trained model to answer requests. |
 | **Inference** | Running a trained model to process input and generate an answer/action. | Most work in these repositories is inference/orchestration, not frontier-model training. |
@@ -25,6 +31,8 @@ Short practical definitions for terms used throughout these repositories. The go
 | **Quantization** | Storing model parameters with fewer bits so the model needs less memory. | Makes large local models practical, usually with some quality/performance trade-off. |
 | **Model / AI provider** | The system/company/runtime that provides access to a model. | OpenAI, Anthropic, Google, hosted inference, or your own local server. `Agent/Harness -> Provider -> Model`. |
 | **Provider** | A concrete implementation behind a generic capability. | Used broadly in this architecture: `logs -> Datadog`, `source control -> Git`, etc. |
+
+The practical relationship between **tokens, context and context window** is worth remembering: every useful piece of context can help the model, but every unnecessary piece also consumes working space and often compute/money. Context management is therefore part of using AI efficiently, not just a technical implementation detail.
 
 ### Common harnesses
 

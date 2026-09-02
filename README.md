@@ -22,9 +22,28 @@ The currently published pieces are **AI Commands**, **AI Workflows**, and **AI P
 
 This umbrella repository also contains shared reference material that does not belong to one implementation project, including **[local model and hardware benchmarks](benchmarks/local-models/README.md)**.
 
+## AI Workflow Suite vocabulary
+
+These are the main building blocks used across the public repositories. The names are intentionally simple; the links lead to the repositories where each concept is defined or demonstrated.
+
+| Term | Simple meaning | Reference |
+| --- | --- | --- |
+| **Command** | A reusable executable AI capability with a defined contract, inputs and outputs. Workflows and agents can use commands without owning their implementation. | [AI Commands](https://github.com/starodubtsevconsulting/ai-commands) |
+| **Workflow** | A reusable process for a kind of work. It defines the roles, rules, collaboration and capabilities needed to pursue an outcome. | [AI Workflows](https://github.com/starodubtsevconsulting/ai-workflows) |
+| **Flow / route** | The path work follows inside a workflow: who talks to whom, what happens next, and where responsibility moves. It is coordination, not another executable command. | [AI Workflows — agents and communication](https://github.com/starodubtsevconsulting/ai-workflows/blob/main/agents.md) |
+| **Role** | A reusable behavioral contract describing responsibilities, boundaries, lifecycle and expected behavior. A role is conceptual; an agent realizes it at runtime. | [AI Workflows — common roles](https://github.com/starodubtsevconsulting/ai-workflows/tree/main/_common/roles) |
+| **Agent** | A runtime participant that realizes a role inside a workflow with concrete configuration, identity, capabilities and relationships to other agents. | [AI Workflows — agents](https://github.com/starodubtsevconsulting/ai-workflows/blob/main/agents.md) |
+| **Profile** | Personal or organization-specific configuration that activates workflows, binds projects, configures commands and supplies policies/runtime preferences. | [AI Profile](https://github.com/starodubtsevconsulting/ai-profile) |
+| **Project / source** | A concrete source of work or knowledge that a workflow operates on. One workflow can work with multiple projects/sources. | [AI Profile — example](https://github.com/starodubtsevconsulting/ai-profile/tree/main/example) |
+| **Provider** | A concrete implementation behind a generic capability, such as Datadog for logs, Git for source control, or a particular model provider for inference. | [AI Commands](https://github.com/starodubtsevconsulting/ai-commands) |
+
+A useful mental model is:
+
+`Profile -> Workflow -> Agents/Roles -> Flow -> Commands -> Providers -> Result`
+
 ## AI vocabulary
 
-Short practical definitions for terms used throughout these repositories. The goal is intuition first; implementations vary.
+Short practical definitions for broader AI terms used throughout these repositories. The goal is intuition first; implementations vary.
 
 | Term | Simple meaning | Practical note / reference |
 | --- | --- | --- |

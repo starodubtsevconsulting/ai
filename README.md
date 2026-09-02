@@ -56,6 +56,12 @@ Harnesses may appear/disappear; the abstraction remains useful.
 
 \*Order-of-magnitude USD hardware intuition only, not a buying guide. Prices vary by hardware, location and speed requirements. Runtime also needs memory for context/KV cache and software overhead.
 
+### Human brain vs. AI model — visual intuition
+
+Parameter counts are difficult to build intuition around. The image below gives a deliberately rough visual comparison between AI model sizes and human brain development. It is **not a scientific one-to-one equivalence**: parameters, neurons and synapses are fundamentally different things. The purpose is simply to make the scale easier to think about.
+
+![Human brain vs AI model — rough comparison](img/human_brain_vs_ai_model.png)
+
 ## Repositories
 
 ### [AI Commands](https://github.com/starodubtsevconsulting/ai-commands)

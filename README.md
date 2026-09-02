@@ -12,7 +12,7 @@ This collection covers agents, workflows, reusable commands, profiles, local mod
 
 What is public here is a deliberately selected **slice of a larger working system**: reusable patterns, architectural decisions, rules, commands, workflows, experiments, benchmarks and some of the reasoning behind them. It is the visible tip rather than the complete implementation.
 
-The larger system also includes runtime and orchestration code, UI, launcher/runtime integration, private profiles, project-specific integrations, memory infrastructure, local-model workers and other implementation pieces that are intentionally not published here.
+**Do I actually use this? Yes.** The public repositories are derived from patterns and pieces I use in my private working environment. The private version has the additional runtime, UI, launcher integration, project-specific configuration, memory, local-model workers, integrations and other bells and whistles needed for day-to-day use.
 
 The purpose of this repository is therefore not to claim that every building block is new. It is to make some of the work and thinking visible, provide useful pieces where they can stand on their own, and create a concrete starting point for conversations, collaboration and new opportunities.
 

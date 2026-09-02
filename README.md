@@ -1,14 +1,26 @@
 # AI
 
-This is the umbrella repository for useful public pieces of the **AI Workflow Suite** and related AI work from Starodubtsev Consulting. The projects are kept in separate repositories so each piece can evolve and be used independently, while this repository provides a simple entry point to understand how they fit together.
+**A public window into how I am building and using AI systems in real work.**
+
+This collection covers agents, workflows, reusable commands, profiles, local models, governance, automation and experiments. For someone exploring my work, it is a quick way to see the areas of AI engineering I am actively working with rather than just a list of technologies on a profile.
 
 ![AI Workflow Suite](img/ai_workflow_suite.png)
 
-The public collection currently includes **AI Commands**, **AI Workflows**, and **AI Profile**, with additional useful pieces published as they become ready. Feel free to explore, contribute, or ask questions.
+### For people who already build this stuff
 
-This umbrella repository also contains shared AI reference material that does not belong to one specific implementation project, including **[local model and hardware benchmarks](benchmarks/local-models/README.md)**.
+**This is not another AI agent framework.** Agents, tools, workflows, MCP and many of the individual ideas here already exist in excellent systems, and that is expected.
 
-Public entry point for reusable AI-assisted work projects from Starodubtsev Consulting.
+What is public here is a deliberately selected **slice of a larger working system**: reusable patterns, architectural decisions, rules, commands, workflows, experiments, benchmarks and some of the reasoning behind them. It is the visible tip rather than the complete implementation.
+
+The larger system also includes runtime and orchestration code, UI, launcher/runtime integration, private profiles, project-specific integrations, memory infrastructure, local-model workers and other implementation pieces that are intentionally not published here.
+
+The purpose of this repository is therefore not to claim that every building block is new. It is to make some of the work and thinking visible, provide useful pieces where they can stand on their own, and create a concrete starting point for conversations, collaboration and new opportunities.
+
+## Public collection
+
+The currently published pieces are **AI Commands**, **AI Workflows**, and **AI Profile**, with additional pieces published when they make sense independently and are suitable for public use.
+
+This umbrella repository also contains shared reference material that does not belong to one implementation project, including **[local model and hardware benchmarks](benchmarks/local-models/README.md)**.
 
 ## AI vocabulary
 

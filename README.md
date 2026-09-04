@@ -16,6 +16,10 @@ This collection covers agents, workflows, reusable commands, profiles, local mod
 
 There is a story behind the name — and, somehow, whatever the original subject is, the conversation eventually gets back to AI.
 
+## What is inside
+
+The project brings together the pieces I use to think about and organize AI-assisted work. The diagram below gives the high-level picture before getting into the individual commands, workflows, roles and runtime concepts.
+
 ![AI Workflow Suite](img/ai_workflow_suite.png)
 
 ### For people who already build this stuff

@@ -1,0 +1,2 @@
+from_agent,to_agent,operation,allowed,purpose
+# No Software Development overrides. Lifecycle policy is inherited from _common/team-templates/standard/lifecycle-matrix.csv.

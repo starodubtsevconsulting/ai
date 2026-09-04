@@ -28,14 +28,14 @@ These are the main building blocks used across the public repositories. The name
 
 | Term | Simple meaning | Reference |
 | --- | --- | --- |
-| **Command** | A reusable executable AI capability with a defined contract, inputs and outputs. Workflows and agents can use commands without owning their implementation. | [AI Commands](https://github.com/starodubtsevconsulting/ai-commands) |
-| **Workflow** | A reusable process for a kind of work. It defines the roles, rules, collaboration and capabilities needed to pursue an outcome. | [AI Workflows](https://github.com/starodubtsevconsulting/ai-workflows) |
-| **Flow / route** | The path work follows inside a workflow: who talks to whom, what happens next, and where responsibility moves. It is coordination, not another executable command. | [AI Workflows — agents and communication](https://github.com/starodubtsevconsulting/ai-workflows/blob/main/agents.md) |
-| **Role** | A reusable behavioral contract describing responsibilities, boundaries, lifecycle and expected behavior. A role is conceptual; an agent realizes it at runtime. | [AI Workflows — common roles](https://github.com/starodubtsevconsulting/ai-workflows/tree/main/_common/roles) |
-| **Agent** | A runtime participant that realizes a role inside a workflow with concrete configuration, identity, capabilities and relationships to other agents. | [AI Workflows — agents](https://github.com/starodubtsevconsulting/ai-workflows/blob/main/agents.md) |
+| **Command** | A reusable executable AI capability with a defined contract, inputs and outputs. Workflows and agents can use commands without owning their implementation. | [AI Commands](https://github.com/starodubtsevconsulting/ai/tree/main/ai-commands) |
+| **Workflow** | A reusable process for a kind of work. It defines the roles, rules, collaboration and capabilities needed to pursue an outcome. | [AI Workflows](https://github.com/starodubtsevconsulting/ai/tree/main/ai-workflows) |
+| **Flow / route** | The path work follows inside a workflow: who talks to whom, what happens next, and where responsibility moves. It is coordination, not another executable command. | [AI Workflows — agents and communication](https://github.com/starodubtsevconsulting/ai/blob/main/ai-workflows/agents.md) |
+| **Role** | A reusable behavioral contract describing responsibilities, boundaries, lifecycle and expected behavior. A role is conceptual; an agent realizes it at runtime. | [AI Workflows — common roles](https://github.com/starodubtsevconsulting/ai/tree/main/ai-workflows/_common/roles) |
+| **Agent** | A runtime participant that realizes a role inside a workflow with concrete configuration, identity, capabilities and relationships to other agents. | [AI Workflows — agents](https://github.com/starodubtsevconsulting/ai/blob/main/ai-workflows/agents.md) |
 | **Profile** | Personal or organization-specific configuration that activates workflows, binds projects, configures commands and supplies policies/runtime preferences. | [AI Profile](https://github.com/starodubtsevconsulting/ai-profile) |
 | **Project / source** | A concrete source of work or knowledge that a workflow operates on. One workflow can work with multiple projects/sources. | [AI Profile — example](https://github.com/starodubtsevconsulting/ai-profile/tree/main/example) |
-| **Provider** | A concrete implementation behind a generic capability, such as Datadog for logs, Git for source control, or a particular model provider for inference. | [AI Commands](https://github.com/starodubtsevconsulting/ai-commands) |
+| **Provider** | A concrete implementation behind a generic capability, such as Datadog for logs, Git for source control, or a particular model provider for inference. | [AI Commands](https://github.com/starodubtsevconsulting/ai/tree/main/ai-commands) |
 
 A useful mental model is:
 
@@ -47,7 +47,7 @@ Short practical definitions for broader AI terms used throughout these repositor
 
 | Term | Simple meaning | Practical note / reference |
 | --- | --- | --- |
-| **Agent** | A running AI participant with a model, context, rules and capabilities that can pursue a goal and take actions. | In this project, workflow agents realize reusable roles. See [AI Workflows](https://github.com/starodubtsevconsulting/ai-workflows). |
+| **Agent** | A running AI participant with a model, context, rules and capabilities that can pursue a goal and take actions. | In this project, workflow agents realize reusable roles. See [AI Workflows](https://github.com/starodubtsevconsulting/ai/tree/main/ai-workflows). |
 | **Roster** | The current list of active agent instances: who is present, their role and runtime identity. | Team definition is the organization chart; roster is **who is actually at work right now**. |
 | **Harness** | Runtime machinery around a model: agent loop, sessions, tools, files, terminal, plugins, sub-agents, computer use, etc. | **Model = intelligence; harness = machinery that lets it work.** Examples below. |
 | **Token** | A small piece of text a language model reads or produces. A word may be one token or several. | Not literally electricity/GPU time, but a useful meter of model work: more unnecessary tokens usually mean more compute, latency and cost. |
@@ -97,11 +97,11 @@ Parameter counts are difficult to build intuition around. The image below gives 
 
 ## Repositories
 
-### [AI Commands](https://github.com/starodubtsevconsulting/ai-commands)
+### [AI Commands](https://github.com/starodubtsevconsulting/ai/tree/main/ai-commands)
 
 Pluggable executable skills that combine AI-readable Markdown contracts with optional scripts, supporting code, configuration boundaries, reports, and command-owned visual tools.
 
-### [AI Workflows](https://github.com/starodubtsevconsulting/ai-workflows)
+### [AI Workflows](https://github.com/starodubtsevconsulting/ai/tree/main/ai-workflows)
 
 Reusable business and work processes that coordinate commands and define the agent roles, rules, and collaboration needed to complete a workflow.
 

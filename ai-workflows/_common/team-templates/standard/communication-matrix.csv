@@ -1,0 +1,30 @@
+from_role,to_role,allowed,purpose
+Human,Admin,true,Human is the normal conversational caller of Admin
+Admin,Human,true,Report lifecycle/recovery results and request Human decisions
+Human,Judge,true,Judge is Human-facing governance authority
+Judge,Human,true,Report governance findings and receive Human-authored decisions
+Human,Strategist,true,Allow direct workflow strategy discussion when exposed
+Strategist,Human,true,Discuss workflow strategy and durable decisions
+Human,Manager,false,Manager is not Human-facing by default
+Human,Worker,false,Workers are not Human-facing by default; workflows may override for selected Agents
+Admin,Strategist,true,Admin may administer workflow participants within lifecycle/recovery scope
+Admin,Manager,true,Admin may administer workflow participants within lifecycle/recovery scope
+Admin,Worker,true,Admin may administer workflow participants within lifecycle/recovery scope
+Admin,Judge,false,Admin does not normally converse with Judge; lifecycle control is separate
+Strategist,Admin,false,Workflow participants do not initiate ordinary communication with Admin
+Manager,Admin,false,Workflow participants do not initiate ordinary communication with Admin
+Worker,Admin,false,Workflow participants do not initiate ordinary communication with Admin
+Judge,Admin,false,Judge does not initiate ordinary communication with Admin
+Manager,Judge,false,Manager lifecycle/validation control paths do not grant ordinary Judge conversation
+Worker,Judge,false,Workers cannot initiate ordinary Judge conversation
+Strategist,Judge,false,Strategist cannot initiate ordinary Judge conversation by default
+Judge,Manager,false,Judge governance does not create ordinary Manager conversation
+Judge,Worker,false,Judge governance does not create ordinary Worker conversation
+Judge,Strategist,false,Judge governance does not create ordinary Strategist conversation
+Strategist,Manager,true,Strategist may request workflow coordination
+Manager,Strategist,true,Manager may return coordination status or escalate strategic decisions
+Manager,Worker,true,Manager may route bounded work/context to managed Workers
+Worker,Manager,false,Workers do not normally invoke Manager; workflows may override when domain coordination requires it
+Strategist,Worker,true,Strategist may delegate bounded domain work when workflow permits
+Worker,Strategist,true,Workers may report/escalate strategic concerns when workflow routing permits
+Worker,Worker,false,Worker-to-Worker communication is workflow-specific and must be explicitly overridden/granted

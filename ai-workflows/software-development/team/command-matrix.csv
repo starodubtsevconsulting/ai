@@ -1,0 +1,18 @@
+agent,command,access,notes
+Designer Reviewer,source-control,allowed,Uses primarily through Command Runner for Git history diff commit push branch and merge execution
+Designer Reviewer,logs,allowed,Uses through Command Runner for bounded runtime diagnostics
+Designer Reviewer,ticket-tracker,forbidden,Must use Manager rather than access ticket system command directly
+Coder,source-control,allowed,May invoke directly for Git operations subject to workflow/runtime authorization
+Coder,logs,allowed,Must use through Command Runner so raw logs are bounded before reaching Coder
+Coder,ticket-tracker,forbidden,Ticket context is supplied with task; Coder does not manage tickets
+Manager,ticket-tracker,allowed,Primary command for ticket read search create update comment assign subtask archive and priority-field operations
+Manager,source-control,forbidden,Manager has no source-control responsibility
+Manager,logs,forbidden,Manager has no runtime diagnostic responsibility
+Reviewer,ticket-tracker,forbidden,Reviewer does not manage tickets
+Judge,source-control,allowed,May invoke directly for Git history branch commit push merge and other authorized operations on governance artifacts
+Judge,ticket-tracker,forbidden,Judge governs rules rather than project tickets
+Judge,logs,forbidden,Judge is not an operational diagnostics agent
+Strategist,ticket-tracker,forbidden,Strategist does not perform operational ticket administration directly
+Command Runner,source-control,allowed,Normal and temporary copies may execute only for a caller whose own command policy allows source-control
+Command Runner,logs,allowed,Normal and temporary copies may execute only for a caller whose own command policy allows logs
+Command Runner,ticket-tracker,allowed,Technical execution capability only; caller policy still applies and does not bypass Manager ownership

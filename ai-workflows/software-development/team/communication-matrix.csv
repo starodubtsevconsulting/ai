@@ -1,0 +1,17 @@
+from_agent,to_agent,allowed,purpose
+Human,Designer Reviewer,true,Software Development exposes this Worker directly for design/development conversation
+Designer Reviewer,Human,true,Report design trade-offs decisions and implementation-conformance findings
+Human,Coder,true,Software Development may expose this Worker for bounded implementation interaction
+Coder,Human,true,Discuss bounded implementation when exposed
+Designer Reviewer,Manager,true,Software Development Worker may request ticket/work coordination
+Designer Reviewer,Coder,true,Supervising Worker to Assigned Worker bounded design inspection implementation and correction route
+Designer Reviewer,Command Runner,true,Explicit Worker-to-Worker bounded operation route
+Coder,Designer Reviewer,true,RETURN_ONLY evidence clarification blocker or terminal disposition; no reverse assignment
+Coder,Command Runner,true,Explicit Worker-to-Worker bounded operation route
+Manager,Designer Reviewer,true,Return requested ticket/work information to this Worker
+Manager,Coder,true,Route supplied bounded implementation context to this Worker
+Manager,Command Runner,true,Request authorized bounded operations from this Worker
+Command Runner,Strategist,true,Return bounded execution result
+Command Runner,Designer Reviewer,true,Return bounded execution result
+Command Runner,Coder,true,Return bounded execution result
+Command Runner,Manager,true,Return bounded execution result

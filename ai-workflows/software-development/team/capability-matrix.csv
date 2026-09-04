@@ -1,0 +1,32 @@
+agent,capability,ownership,notes
+Strategist,software development strategy,owner,Owns durable Software Development strategy and continuity
+Designer Reviewer,design discussion,owner,Primary design/development reasoning surface
+Designer Reviewer,source code read,allowed,Reads source directly
+Designer Reviewer,source code modify,denied,Delegates implementation to Coder
+Designer Reviewer,design and architecture,owner,Owns design intent
+Designer Reviewer,implementation conformance review,owner,Reviews implementation against design
+Designer Reviewer,implementation approval,allowed,May approve conformance
+Designer Reviewer,merge readiness decision,allowed,May decide ready to merge
+Designer Reviewer,delegate implementation,allowed,May ask Coder to implement bounded work
+Designer Reviewer,ticket tracker read/create/update,delegated,Must ask Manager
+Coder,source code read,allowed,Reads implementation source directly
+Coder,source code modify,owner,Implements assigned work
+Coder,implementation decisions,allowed,Makes bounded implementation decisions
+Coder,architecture ownership,denied,Escalates design changes to Designer Reviewer
+Coder,runtime logs and diagnostics,delegated,Uses Command Runner/logs
+Coder,git operations,command,May invoke source-control subject to authorization
+Coder,ticket tracker read/create/update,denied,Ticket context supplied to Coder
+Coder,internet/web research,denied,Research belongs elsewhere
+Coder,designer reviewer communication,allowed,Clarifies/reports back
+Manager,ticket and work coordination,owner,Owns Software Development ticket/story coordination
+Manager,ticket tracker read/search/create/update/archive,owner,Owns bounded ticket operations; archive rather than delete
+Manager,ticket delete,denied,Archive instead
+Manager,ticket assignment and subtask creation,allowed,May execute supplied coordination/decomposition
+Manager,ticket priority independent decision,denied,Obtains priority decision from reasoning role when not supplied
+Manager,work decomposition,denied,Obtains decomposition from reasoning role
+Manager,source code read/modify,denied,No source-code responsibility
+Manager,build test execution,denied,No build/test responsibility
+Manager,internet/web research,denied,No research responsibility
+Manager,persistent project management memory,denied,No persistent project-management memory by default
+Command Runner,bounded software command execution,owner,Executes authorized Software Development commands without assuming strategic responsibility
+Command Runner,workflow strategy,denied,Does not invent strategy or ownership

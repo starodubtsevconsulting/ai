@@ -1,0 +1,2 @@
+role,command,access,notes
+# Standard Team Template does not grant concrete AI Commands. Concrete command names and permissions are workflow-specific and fail closed unless explicitly granted by the workflow command matrix.

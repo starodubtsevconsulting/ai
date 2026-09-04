@@ -44,7 +44,7 @@ broader human context, and asks not only whether an activity is worthwhile, but 
 
 The working role definition is here:
 
-[Global Governor — AI Workflows](https://github.com/starodubtsevconsulting/ai-workflows/blob/main/_common/roles/global/governor.md)
+[Global Governor — AI Workflows](https://github.com/starodubtsevconsulting/ai/blob/main/ai-workflows/_common/roles/global/governor.md)
 
 Maybe the useful personal AI is not the one that knows how to do everything for you. Maybe it is the one that remembers
 what you asked your life to optimize for.

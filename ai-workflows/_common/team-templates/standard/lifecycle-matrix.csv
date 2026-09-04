@@ -1,0 +1,28 @@
+from_role,to_role,operation,allowed,purpose
+Manager,Worker,inspect-health,true,Monitor managed workers for context/lifecycle continuity
+Manager,Worker,clone,true,Replace managed workers according to clone policy
+Manager,Manager,inspect-health,true,Monitor own context/lifecycle health
+Manager,Manager,clone,true,Manager may initiate its own replacement
+Manager,Judge,inspect-health,true,Monitor Judge context/lifecycle health without ordinary conversation
+Manager,Judge,clone,true,Authorized lifecycle replacement; does not grant ordinary communication
+Manager,Strategist,inspect-health,true,Monitor Strategist context/lifecycle health
+Manager,Strategist,clone,true,Authorized lifecycle replacement while preserving handoff continuity
+Manager,Admin,inspect-health,false,Admin is outside Manager lifecycle authority
+Manager,Admin,clone,false,Admin is outside Manager lifecycle authority
+Worker,Worker,clone,false,Workers have no lifecycle authority by default
+Worker,Manager,clone,false,Workers have no lifecycle authority over Manager
+Worker,Judge,clone,false,Workers have no lifecycle authority over Judge
+Worker,Strategist,clone,false,Workers have no lifecycle authority over Strategist
+Worker,Admin,clone,false,Workers have no lifecycle authority over Admin
+Judge,Worker,clone,false,Judge validates governance but does not own staffing
+Judge,Manager,clone,false,Judge validates governance but does not own staffing
+Judge,Strategist,clone,false,Judge validates governance but does not own staffing
+Judge,Admin,clone,false,Judge does not administer Admin
+Strategist,Worker,clone,false,Strategist directs strategy but does not own staffing by default
+Strategist,Manager,clone,false,Strategist does not own lifecycle authority by default
+Strategist,Judge,clone,false,Strategist does not own governance lifecycle
+Strategist,Admin,clone,false,Strategist does not administer Admin
+Admin,Worker,clone,true,Human-controlled Admin lifecycle/recovery authority
+Admin,Manager,clone,true,Human-controlled Admin lifecycle/recovery authority
+Admin,Judge,clone,true,Human-controlled Admin lifecycle control; not ordinary governance conversation
+Admin,Strategist,clone,true,Human-controlled Admin lifecycle/recovery authority

@@ -1,0 +1,26 @@
+role,capability,ownership,notes
+Human,workflow interaction,owner,Human remains final workflow authority
+Human,admin conversation,allowed,May directly invoke Admin for lifecycle/recovery
+Human,judge conversation,allowed,May directly invoke Judge for governance
+Admin,workflow operational administration,owner,Human-controlled operational administration subject to governance/runtime safety
+Admin,agent roster initialize,owner,May initialize/bootstrap workflow roster
+Admin,agent create activate archive replace,owner,May administer workflow Agents according to lifecycle policy
+Admin,roster reconcile,owner,May restore valid runtime topology
+Admin,governance rule modify,denied,Admin does not replace Judge
+Judge,rule compliance review,owner,Checks governing rules within authoritative scope
+Judge,governance validation,owner,Validates governance changes and bounded lifecycle gates
+Judge,agent activity inspect,allowed,May inspect authorized activity/history for compliance
+Judge,staffing,denied,Judge validates but does not own staffing
+Strategist,workflow strategy,owner,Owns workflow-local strategy and durable direction
+Strategist,strategic continuity,owner,Maintains durable strategic context according to memory policy
+Strategist,operational staffing,denied,Does not own staffing by default
+Manager,workflow coordination,owner,Owns bounded coordination responsibility
+Manager,workflow staffing,owner,May manage workflow Agents according to lifecycle policy
+Manager,runtime roster update,owner,Staffing changes update authoritative roster/trust state
+Manager,context health monitoring,owner,Monitors managed Agent lifecycle/context health when runtime supports it
+Manager,domain worker execution,denied,Manager coordinates rather than taking over Worker domain responsibility
+Manager,human conversation,denied,Not Human-facing by default
+Worker,bounded domain work,owner,Owns the bounded domain work assigned to the concrete Worker Agent
+Worker,workflow staffing,denied,Workers do not own staffing
+Worker,governance rule modify,denied,Workers do not modify governance rules
+Worker,admin authority,denied,Workers do not administer workflow topology

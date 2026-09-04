@@ -1,5 +1,9 @@
 # AI Fleas
 
+<p align="center">
+  <img src="img/ai-fleas.png" alt="AI Fleas" width="420" />
+</p>
+
 **A public window into how I am building and using AI systems in real work.**
 
 This collection covers agents, workflows, reusable commands, profiles, local models, governance, automation and experiments. For someone exploring my work, it is a quick way to see the areas of AI engineering I am actively working with rather than just a list of technologies on a profile.

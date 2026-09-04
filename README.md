@@ -12,19 +12,19 @@ This collection covers agents, workflows, reusable commands, profiles, local mod
 
 What is public here is a deliberately selected **slice of a larger working system**: reusable patterns, architectural decisions, rules, commands, workflows, experiments, benchmarks and some of the reasoning behind them. It is the visible tip rather than the complete implementation.
 
-**Do I actually use this? Yes.** The public repositories are derived from patterns and pieces I use in my private working environment. The private version has the additional runtime, UI, launcher integration, project-specific configuration, memory, local-model workers, integrations and other bells and whistles needed for day-to-day use.
+**Do I actually use this? Yes.** The public material is derived from patterns and pieces I use in my private working environment. The private version has the additional runtime, UI, launcher integration, project-specific configuration, memory, local-model workers, integrations and other bells and whistles needed for day-to-day use.
 
 The purpose of this repository is therefore not to claim that every building block is new. It is to make some of the work and thinking visible, provide useful pieces where they can stand on their own, and create a concrete starting point for conversations, collaboration and new opportunities.
 
 ## Public collection
 
-The currently published pieces are **AI Commands**, **AI Workflows**, and **AI Profile**, with additional pieces published when they make sense independently and are suitable for public use.
+The main repository now contains **AI Commands** and **AI Workflows** directly. **AI Profile** remains a separate example repository because profiles are configuration rather than part of the reusable command/workflow implementation.
 
 This umbrella repository also contains shared reference material that does not belong to one implementation project, including **[local model and hardware benchmarks](benchmarks/local-models/README.md)**.
 
 ## AI Workflow Suite vocabulary
 
-These are the main building blocks used across the public repositories. The names are intentionally simple; the links lead to the repositories where each concept is defined or demonstrated.
+These are the main building blocks used across the public collection. The names are intentionally simple; the links lead to where each concept is defined or demonstrated.
 
 | Term | Simple meaning | Reference |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Parameter counts are difficult to build intuition around. The image below gives 
 
 ![Human brain vs AI model — rough comparison](img/human_brain_vs_ai_model.png)
 
-## Repositories
+## Projects
 
 ### [AI Commands](https://github.com/starodubtsevconsulting/ai/tree/main/ai-commands)
 
@@ -111,4 +111,4 @@ A sanitized, copyable example of the personal or organization-specific context t
 
 ## Current status
 
-Only the repositories listed above are currently published as part of this collection. Additional commands, workflows, profiles, runtimes, and integrations remain outside the public collection unless they receive explicit review and, for profiles, sanitization suitable for public release.
+AI Commands and AI Workflows live in this monorepo. AI Profile remains separate. Additional commands, workflows, profiles, runtimes, and integrations remain outside the public collection unless they receive explicit review and, for profiles, sanitization suitable for public release.

@@ -12,6 +12,10 @@ This collection covers agents, workflows, reusable commands, profiles, local mod
   <img src="img/ai-fleas.png" alt="AI Fleas mascot" width="360" />
 </p>
 
+### [Why AI Fleas?](notes/2026-09-04-why-ai-fleas.md)
+
+There is a story behind the name — and, somehow, whatever the original subject is, the conversation eventually gets back to AI.
+
 ![AI Workflow Suite](img/ai_workflow_suite.png)
 
 ### For people who already build this stuff
